@@ -1,0 +1,8 @@
+{% macro input(lable='',type = 'text',name='',value = '') %}
+ <lable>{{ lable }}</lable><input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+{% endmacro %}
+
+
+{% macro img(href='',src='') %}
+    <a href="{{ href }}"><img src="{{ src }}" alt=""></a>
+{% endmacro %}

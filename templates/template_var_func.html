@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    请求方法：{{ request.method }}<br/>
+    请求路径：{{ request.url }}<br/>
+    session 提取：{{ session['name'] }}<br/>
+    调试模式：{{ config['DEBUG'] }}<br/>
+    g变量的应用：{{ g.age }}
+    <hr>
+反向解析：
+    <a href="{{ url_for('order' , order_id =1234 ) }}">去到你想去的地方</a>
+    <hr>
+{# get_flashed_messages  用于提取消息队列中的消息 #}
+{% for message in get_flashed_messages() %}
+{{ message }}<br/>
+{% endfor %}
+</body>
+</html>
